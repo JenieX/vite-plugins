@@ -1,7 +1,10 @@
 import { defineConfig } from 'tsdown';
 
 const config = defineConfig({
-  entry: ['src/*/index.ts'],
+  entry: [
+    'src/index.ts',
+    'src/*/index.ts',
+  ],
 
   dts: true,
 

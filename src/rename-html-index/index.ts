@@ -1,7 +1,7 @@
 import type { Plugin } from 'vite';
 
 // Vite doesn't have a dedicated option to rename index.html
-function RenameHTMLIndex(name: string): Plugin {
+function renameHTMLIndex(name: string): Plugin {
   return {
     name: 'test',
     generateBundle: {
@@ -22,4 +22,4 @@ function RenameHTMLIndex(name: string): Plugin {
   };
 }
 
-export default RenameHTMLIndex;
+export default renameHTMLIndex;
