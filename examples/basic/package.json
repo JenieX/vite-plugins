@@ -1,0 +1,14 @@
+{
+  "$schema": "file:///D:/projects/json-schemas/package.json",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch"
+  },
+  "dependencies": {
+    "@jeniex/vite-plugins": "workspace:*"
+  },
+  "devDependencies": {
+    "vite": "^8.3.8"
+  }
+}
