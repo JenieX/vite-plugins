@@ -1,7 +1,7 @@
 {
   "$schema": "file:///D:/projects/json-schemas/package.json",
   "name": "@jeniex/vite-plugins",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "type": "module",
   "exports": {
     ".": {
