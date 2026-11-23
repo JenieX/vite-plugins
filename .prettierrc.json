@@ -31,10 +31,11 @@
       "files": [
         ".prettierrc.json",
         "tsconfig.json",
-        "tsdown.config.ts"
+        "tsdown.config.ts",
+        "vite.config.ts"
       ],
       "options": {
-        "printWidth": 30
+        "printWidth": 35
       }
     }
   ]

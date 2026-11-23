@@ -3,7 +3,10 @@ import { appendPrettierIgnore } from '@jeniex/vite-plugins';
 import path from 'node:path';
 
 export default defineConfig({
-  input: path.resolve(import.meta.dirname, 'src/main.ts'),
+  input: path.resolve(
+    import.meta.dirname,
+    'src/main.ts',
+  ),
 
   build: {
     minify: 'terser',
@@ -15,5 +18,7 @@ export default defineConfig({
       },
     },
   },
-  plugins: [appendPrettierIgnore()],
+  plugins: [
+    appendPrettierIgnore(),
+  ],
 });

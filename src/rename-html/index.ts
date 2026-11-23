@@ -1,12 +1,12 @@
 import type { Plugin } from 'vite';
 
 // Vite doesn't have a dedicated option to rename index.html
-function renameHTMLIndex(name: string): Plugin {
+function renameHTML(name: string): Plugin {
   return {
-    name: 'test',
+    name: 'rename-html',
     generateBundle: {
       order: 'post',
-      async handler(outputOptions, bundle, isWrite) {
+      async handler(outputOptions, bundle) {
         const indexHtml = bundle['index.html'];
         if (!indexHtml || indexHtml.type !== 'asset') return;
 
@@ -22,4 +22,4 @@ function renameHTMLIndex(name: string): Plugin {
   };
 }
 
-export default renameHTMLIndex;
+export default renameHTML;

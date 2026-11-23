@@ -1,9 +1,9 @@
 import prettier from 'prettier';
 import type { Plugin } from 'vite';
 
-function formatHTMLIndex(): Plugin {
+function formatHTML(): Plugin {
   return {
-    name: 'format-html-index',
+    name: 'format-html',
     generateBundle: {
       order: 'post',
       async handler(outputOptions, bundle) {
@@ -25,4 +25,4 @@ function formatHTMLIndex(): Plugin {
   };
 }
 
-export default formatHTMLIndex;
+export default formatHTML;
