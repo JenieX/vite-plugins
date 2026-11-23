@@ -1,7 +1,7 @@
 {
   "$schema": "file:///D:/projects/json-schemas/package.json",
   "name": "@jeniex/vite-plugins",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "exports": {
     ".": {
@@ -21,13 +21,19 @@
     "dev": "tsdown --watch",
     "example:basic:build": "pnpm --dir examples/basic build",
     "example:basic:dev": "pnpm --dir examples/basic dev",
+    "example:script:build": "pnpm --dir examples/script build",
+    "example:script:dev": "pnpm --dir examples/script dev",
     "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "magic-string": "^1.4.5"
   },
   "devDependencies": {
     "@types/node": "^26.6.6",
     "prettier": "^3.10.1",
     "prettier-plugin-jsdoc": "^1.8.1",
     "prettier-plugin-pkg": "^0.22.1",
+    "terser": "^5.51.4",
     "tsdown": "^0.23.7",
     "typescript": "^6.0.3",
     "vite": "^8.3.8"
