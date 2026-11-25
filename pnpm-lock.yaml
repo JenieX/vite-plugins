@@ -12,6 +12,9 @@ importers:
         specifier: ^1.4.5
         version: 1.4.5
     devDependencies:
+      '@jeniex/inspect':
+        specifier: ^1.0.1
+        version: 1.0.1
       '@types/node':
         specifier: ^26.6.6
         version: 26.6.6
@@ -67,6 +70,12 @@ packages:
 
   '@emnapi/wasi-threads@2.2.0':
     resolution: {integrity: sha512-JP7OYH38Q7+pyTAe14raZHLQIK7BDKbdwji+Xi3pcd/6QkJYQH3SX4wu6EplGrGJWRepoNzedfm0G3B9Z4e9Rw==}
+
+  '@jeniex/inspect@1.0.1':
+    resolution: {integrity: sha512-yw8mGklYP1TMv4EYTUVK7DGmHbDE56EkLa0ZGkvc2Z++r1AuoTdaqEk9fnjjykBdUc0QD7RhlwJ3UEYttC6ztA==}
+
+  '@jeniex/paint-console@0.0.4':
+    resolution: {integrity: sha512-z6Amcmzt7cuvBW0dVYF+Gsdi9lOovGfcv3FBDKoGDxo1p4rxDNBUSMy6GFpO+WMHQKEhStidt8N3exgv58qtIQ==}
 
   '@jridgewell/gen-mapping@0.3.13':
     resolution: {integrity: sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA==}
@@ -804,6 +813,12 @@ snapshots:
     dependencies:
       tslib: 2.9.1
     optional: true
+
+  '@jeniex/inspect@1.0.1':
+    dependencies:
+      '@jeniex/paint-console': 0.0.4
+
+  '@jeniex/paint-console@0.0.4': {}
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:

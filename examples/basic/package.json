@@ -3,6 +3,7 @@
   "type": "module",
   "scripts": {
     "build": "vite build",
+    "build-inspect": "set NODE_OPTIONS=--inspect-wait=127.0.0.1:2003 && vite build",
     "dev": "vite build --watch"
   },
   "dependencies": {

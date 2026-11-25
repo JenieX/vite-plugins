@@ -1,7 +1,7 @@
 {
   "$schema": "file:///D:/projects/json-schemas/package.json",
   "name": "@jeniex/vite-plugins",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "type": "module",
   "exports": {
     ".": {
@@ -29,6 +29,7 @@
     "magic-string": "^1.4.5"
   },
   "devDependencies": {
+    "@jeniex/inspect": "^1.0.1",
     "@types/node": "^26.6.6",
     "prettier": "^3.10.1",
     "prettier-plugin-jsdoc": "^1.8.1",

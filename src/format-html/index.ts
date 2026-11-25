@@ -4,22 +4,23 @@ import type { Plugin } from 'vite';
 function formatHTML(): Plugin {
   return {
     name: 'format-html',
-    generateBundle: {
+    transformIndexHtml: {
       order: 'post',
-      async handler(outputOptions, bundle) {
-        for (const output of Object.values(bundle)) {
-          if (output.type !== 'asset') continue;
-          if (!output.fileName.endsWith('.html')) continue;
+      handler: async (html, ctx) => {
+        const indexAbsolutePath = ctx.filename;
 
-          const source = String(output.source);
+        // Does work, and does resolve from where `vite.config.ts` is located
+        // And if no correct value is provided, it auto-located `.prettierrc.json`
+        // Also, value can be an absolute path
+        const prettierConfig = await prettier.resolveConfig(
+          // './index.html',
+          indexAbsolutePath,
+        );
 
-          const prettierConfig = await prettier.resolveConfig(output.fileName);
-
-          output.source = await prettier.format(source, {
-            ...prettierConfig,
-            parser: 'html',
-          });
-        }
+        return await prettier.format(html, {
+          ...prettierConfig,
+          parser: 'html',
+        });
       },
     },
   };
